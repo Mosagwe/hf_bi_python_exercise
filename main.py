@@ -2,7 +2,7 @@ import utils.etl as etl
 
 import os
 
-# HF - URL
+# URL of the JSON Lines file and the path to the output JSON file
 url = 'https://bnlf-tests.s3.eu-central-1.amazonaws.com/recipes.json'
 
 # Json file/path to save

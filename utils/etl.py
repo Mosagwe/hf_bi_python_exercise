@@ -4,26 +4,38 @@ import json
 from .utils import time_to_minutes, calculate_difficulty, min_distance_to_chili
 
 def download_json(url, filename):
-    # HTTP GET to URL
-    response = requests.get(url)
+    try:
+        # HTTP GET to URL
+        response = requests.get(url)
 
-    # success (200)
-    if response.status_code == 200:
+        # success (200)
+        if response.status_code == 200:
 
-        #write the answer in a file
-        with open(filename, 'wb') as file:
-            file.write(response.content)
-        print(f"File '{filename}' downloaded with success.")
+            #write the answer in a file
+            with open(filename, 'wb') as file:
+                file.write(response.content)
+            print(f"File '{filename}' downloaded with success.")
 
-    else:
-        raise Exception(f"File download failed with status code: {response.status_code}")
+        else:
+            raise Exception(f"File download failed with status code: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"Error downloading the file: {e}")
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON: {e}")
     
 def format_json(filename):
-    data = []
-    with open(filename, 'r') as file:
-        for line in file:
-            data.append(json.loads(line))
-    return data
+    try:
+        data = []
+        with open(filename, 'r') as file:
+            for line in file:
+                data.append(json.loads(line))
+        return data
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON in file '{filename}': {e}")
+    except Exception as e:
+        print(f"An error occurred while reading file '{filename}': {e}")
 
 def process_data(filename):
     # Format Json downloaded
