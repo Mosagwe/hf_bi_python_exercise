@@ -61,7 +61,7 @@ def process_data(filename):
     return filtered_recipes, average_times_filtered
 
 def save_csv(filtered_recipes, average_times_filtered, chilies_csv_path, results_csv_path):
-    # Saves DataFrame as CSV, '|' as separator
+    # Write results to CSV file, '|' as separator
     filtered_recipes.to_csv(chilies_csv_path, index=False, sep='|')
 
     # Save to CSV

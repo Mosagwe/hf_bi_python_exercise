@@ -11,7 +11,7 @@ This Python script extracts recipes containing chilies from a JSON file, adds a 
 
    ```
 
-2. **Set up a Virtual Environment:**
+2. **Create and Activate a Virtual Environment (Optional but Recommended):**
    To set up a virtual environment, run:
 
    ```bash

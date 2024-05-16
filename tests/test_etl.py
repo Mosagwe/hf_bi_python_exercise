@@ -33,16 +33,16 @@ class TestDownload(unittest.TestCase):
     def setUp(self):
         # init config
         self.test_data = [
-            {
-                "name": "Recipe1",
-                "ingredients": "1 cup chilies\n1 tbsp olive oil\nSalt and pepper to taste",
-                "url": "http://example.com/recipe1",
-                "image": "http://example.com/images/recipe1.jpg",
+           {
+                "name": "Easy Green Chile Enchiladas",
+                "ingredients": "1 whole Onion, Diced\n2 Tablespoons Butter\n1 can (15 Ounce) Green Enchilada Sauce\n2 cans (4 Ounce) Chopped Green Chilies\n12 whole Corn Tortillas\n2 cups Freshly Grated Cheddar (or Cheddar-jack) Cheese (or Any Cheese You'd Like)\n Sour Cream\n Salsa\n Pico De Gallo (optional)\n Guacamole (optional)\n Cilantro Leaves, Optional",
+                "url": "http://thepioneerwoman.com/cooking/2012/05/easy-green-chile-enchiladas/",
+                "image": "http://static.thepioneerwoman.com/cooking/files/2012/05/enchilada.jpg",
                 "cookTime": "PT10M",
                 "recipeYield": "4",
-                "datePublished": "2021-01-01",
-                "prepTime": "PT20M",
-                "description": "A simple and delicious recipe for using chilies."
+                "datePublished": "2012-05-31",
+                "prepTime": "PT5M",
+                "description": "When I was in Albuquerque with Marlboro Man and the boys a month ago, I had a really fun book signing. Such incredibly nice a..."
             },
             {
                 "name": "Recipe2",
@@ -52,7 +52,7 @@ class TestDownload(unittest.TestCase):
                 "cookTime": "PT20M",
                 "recipeYield": "2",
                 "datePublished": "2021-02-01",
-                "prepTime": "PT5M",
+                "prepTime": "PT10M",
                 "description": "An easy recipe for plain rice."
             }
         ]

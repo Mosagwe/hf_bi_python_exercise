@@ -11,6 +11,7 @@ def min_distance_to_chili(ingredient_list):
     return min(distances) if distances else float('inf')
 
 def time_to_minutes(time_str):
+    # extract the time element from the recipes
     if time_str is None or not time_str:
         return 0
     hours = re.search(r'(\d+)H', time_str)
@@ -23,6 +24,7 @@ def time_to_minutes(time_str):
     return total_minutes
 
 def calculate_difficulty(row):
+    # Calculate total time for each difficulty level
     prep_time = time_to_minutes(row['prepTime'])
     cook_time = time_to_minutes(row['cookTime'])
     total_time = prep_time + cook_time
