@@ -2,6 +2,11 @@
 
 This Python script extracts recipes containing chilies from a JSON file, adds a difficulty field based on total time, removes duplicates, and saves the results in CSV files.
 
+### Prerequisites
+
+- Python is installed.
+- Pandas is installed.
+
 ### Instructions
 
 1. **Clone the Repository:**
@@ -12,6 +17,7 @@ This Python script extracts recipes containing chilies from a JSON file, adds a 
    ```
 
 2. **Create and Activate a Virtual Environment (Optional but Recommended):**
+
    To set up a virtual environment, run:
 
    ```bash
