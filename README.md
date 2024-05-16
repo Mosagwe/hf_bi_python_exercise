@@ -11,7 +11,15 @@ This Python script extracts recipes containing chilies from a JSON file, adds a 
 
    ```
 
-2. **Install Dependencies:**
+2. **Set up a Virtual Environment:**
+   It's a good practice to use a virtual environment for Python projects. To set up a virtual environment, run:
+
+   ```bash
+   python -m venv hf_bi_python_excercise
+   source venv/bin/activate
+   ```
+
+3. **Install Dependencies:**
 
    ```bash
    cd your_repository
@@ -19,19 +27,19 @@ This Python script extracts recipes containing chilies from a JSON file, adds a 
 
    ```
 
-3. **Run the Script:**
+4. **Run the Script:**
 
    ```bash
    python main.py
 
    ```
 
-4. **Output Files:**
+5. **Output Files:**
 
    - **Chilies.csv**: Contains extracted recipes with added difficulty field.
    - **Results.csv**: Contains average total time aggregated at three difficulty
 
-5. **Unit Test:**
+6. **Unit Test:**
 
    ```bash
    python -m unittest ./tests/*.py
